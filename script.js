@@ -25,15 +25,15 @@ function typeEffect() {
   }
 
   // Adjust speed
-  let typeSpeed = isDeleting ? 60 : 120;
+  let typeSpeed = isDeleting ? 60 : 115;
 
 if (!isDeleting && charIndex === currentWord.length) {
-  typeSpeed = 600;
+  typeSpeed = 565;
   isDeleting = true;
 } else if (isDeleting && charIndex === 0) {
   isDeleting = false;
   wordIndex = (wordIndex + 1) % words.length;
-  typeSpeed = 260;
+  typeSpeed = 250;
 }
 
   setTimeout(typeEffect, typeSpeed);
