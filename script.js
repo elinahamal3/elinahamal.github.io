@@ -25,16 +25,16 @@ function typeEffect() {
   }
 
   // Adjust speed
-  let typeSpeed = isDeleting ? 50 : 100;
+  let typeSpeed = isDeleting ? 70 : 130;
 
-  if (!isDeleting && charIndex === currentWord.length) {
-    typeSpeed = 400;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    typeSpeed = 200;
-  }
+if (!isDeleting && charIndex === currentWord.length) {
+  typeSpeed = 700;
+  isDeleting = true;
+} else if (isDeleting && charIndex === 0) {
+  isDeleting = false;
+  wordIndex = (wordIndex + 1) % words.length;
+  typeSpeed = 270;
+}
 
   setTimeout(typeEffect, typeSpeed);
 }
